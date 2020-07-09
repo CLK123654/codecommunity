@@ -7,6 +7,9 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * @author hhb
+ */
 @Configuration
 public class LoginConfig implements WebMvcConfigurer {
 
@@ -28,5 +31,6 @@ public class LoginConfig implements WebMvcConfigurer {
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     registry.addResourceHandler("/**").addResourceLocations("classpath:/templates/");
+    registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
   }
 }
